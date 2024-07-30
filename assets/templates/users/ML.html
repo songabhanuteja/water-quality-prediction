@@ -1,0 +1,58 @@
+{% extends 'users/userbase.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML page</title>
+</head>
+<body>
+    <center>
+        <h3>DECISION TREE RESULTS</h3>
+    <table border="1">
+        <tr><td>DECISION_TREE_Accuracy:</td><td>{{accuracy.DT}}</td> </tr>
+        <tr><td>DECISION_TREE_precision:</td><td>{{precision.DT}}</td> </tr>
+        <tr><td>DECISION_TREE_recall:</td><td>{{recall.DT}}</td> </tr>
+        <tr><td>DECISION_TREE_f1score:</td><td>{{f1score.DT}}</td> </tr>
+        <!-- <tr><td>DECISION TREE_confusionmatrix:</td><td>{{confusionmatrix.DT}}</td> </tr> -->
+    </table>
+    </center>
+
+    <center>
+        <h3>KNN RESULTS</h3>
+    <table border="1">        
+        <tr><td>KNN_Accuracy:</td><td>{{accuracy.KNN}}</td> </tr>
+        <tr><td>KNN_precision:</td><td>{{precision.KNN}}</td> </tr>
+        <tr><td>KNN_recall:</td><td>{{recall.KNN}}</td> </tr>
+        <tr><td>KNN_f1score:</td><td>{{f1score.KNN}}</td> </tr>
+        <!-- <tr><td>KNN _confusionmatrix:</td><td>{{confusionmatrix.SVM}}</td> </tr> -->
+    </table>
+    </center>
+
+    <center>
+        <h3>RANDOM FOREST RESULTS</h3>
+    <table border="1">        
+        <tr><td>RF_Accuracy:</td><td>{{accuracy.RF}}</td> </tr>
+        <tr><td>RF_precision:</td><td>{{precision.RF}}</td> </tr>
+        <tr><td>RF_recall:</td><td>{{recall.RF}}</td> </tr>
+        <tr><td>RF_f1score:</td><td>{{f1score.RF}}</td> </tr>
+        <!-- <tr><td>RF_confusionmatrix:</td><td>{{confusionmatrix.RF}}</td> </tr>  -->
+
+    </table>
+    </center>
+    <center>
+        <h3>GBC</h3>
+    <table border="1">        
+        <tr><td>GBC_Accuracy:</td><td>{{accuracy.GBC}}</td> </tr>
+        <tr><td>GBC_precision:</td><td>{{precision.GBC}}</td> </tr>
+        <tr><td>GBC_recall:</td><td>{{recall.GBC}}</td> </tr>
+        <tr><td>GBC_f1score:</td><td>{{f1score.GBC}}</td> </tr>
+        <!-- <tr><td>RF_confusionmatrix:</td><td>{{confusionmatrix.RF}}</td> </tr>        -->
+
+    </table>
+    </center>
+    
+</body>
+</html>
+
+{% endblock %}
